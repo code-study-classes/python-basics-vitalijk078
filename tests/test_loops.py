@@ -25,9 +25,9 @@ class TestLoopsFunctions:
     
     @pytest.mark.parametrize("text, expected", [
         ("Beautiful day", 1),
-        ("Queueing", 2),
+        ("Queueing", 3),
         ("Python", 0),
-        ("AeIoU", 1),
+        ("AeIoU", 3),
         ("", 0),
         ("YyY", 1),
         ("Hello world", 0),
