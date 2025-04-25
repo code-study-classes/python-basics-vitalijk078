@@ -16,19 +16,18 @@ def describe_number(n):
 
 
 def convert_to_meters(unitNumber, lengthInUnits):
-    match unitNumber:
-        case 1:
-            return lengthInUnits / 10
-        case 2:
-            return lengthInUnits * 1000
-        case 3:
-            return lengthInUnits
-        case 4:
-            return lengthInUnits / 1000
-        case 5:
-            return lengthInUnits / 100
-        case _:
-            return 0
+    if unitNumber == 1:
+        return lengthInUnits / 10
+    elif unitNumber == 2:
+        return lengthInUnits * 1000
+    elif unitNumber == 3:
+        return lengthInUnits
+    elif unitNumber == 4:
+        return lengthInUnits / 1000
+    elif unitNumber == 5:
+        return lengthInUnits / 100
+    else:
+        return 0
 
 
 def describe_age(age):
@@ -41,6 +40,7 @@ def describe_age(age):
         6: 'шестьдесят', 7: 'семьдесят', 8: 'восемьдесят', 9: 'девяносто'
     }
 
+    # Теперь используем переменные units и tens в коде:
     if age == 100:
         age_str = 'сто'
     else:
